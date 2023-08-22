@@ -28,3 +28,4 @@ go.work
 
 settings.xml
 codeartifact
+.DS_Store

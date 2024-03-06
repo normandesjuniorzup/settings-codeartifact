@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-const SUCCESS_LOGIN_MESSAGE = "Successfully logged into Start URL: https://zup.awsapps.com/start"
+const SUCCESS_LOGIN_MESSAGE = "Successfully logged into Start URL: https://clarocorp.awsapps.com/start"
 
 type Command interface {
 	Run() error

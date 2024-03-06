@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	ssoLogin := exec.Command("aws", "sso", "login", "--profile", "CodeArtifact")
+	ssoLogin := exec.Command("aws", "sso", "login", "--profile", "CodeArtifactClaro")
 	var out strings.Builder
 	ssoLogin.Stdout = &out
 	if err := Login(ssoLogin, &out); err != nil {
@@ -23,7 +23,7 @@ func main() {
 	ctx := context.TODO()
 	cfg, err := config.LoadDefaultConfig(
 		ctx,
-		config.WithSharedConfigProfile("CodeArtifact"),
+		config.WithSharedConfigProfile("CodeArtifactClaro"),
 	)
 	if err != nil {
 		log.Fatalf("error loading config: %s", err)

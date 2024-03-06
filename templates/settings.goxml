@@ -1,134 +1,49 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xsi="http://www.w3.org/2001/XMLSchema-instance"
+  schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+
   <servers>
     <server>
-      <id>rit_zup-repos_darwin-jars-releases</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_darwin-jars-snapshots</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_itau-jars-releases</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_rw-jars-releases</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_rw-jars-snapshots</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_internal-legacy</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_snapshots-legacy</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_zup-jars-releases</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_zup-jars-snapshots</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_zupme-jars-releases</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit_zup-repos_zupme-jars-snapshots</id>
-      <username>zup</username>
-      <password>{{.}}</password>
-    </server>
-    <server>
-      <id>rit-zup-public</id>
-      <username>zup</username>
+      <id>claro-codeartifact-claro-flex-artifacts</id>
+      <username>aws</username>
       <password>{{.}}</password>
     </server>
   </servers>
+
   <profiles>
     <profile>
+      <id>claro-codeartifact-claro-flex-artifacts</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <repositories>
         <repository>
-          <id>rit_zup-repos_darwin-jars-releases</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/darwin-jars-releases/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_darwin-jars-snapshots</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/darwin-jars-snapshots/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_itau-jars-releases</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/itau-jars-releases/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_rw-jars-releases</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/rw-jars-releases/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_rw-jars-snapshots</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/rw-jars-snapshots/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_internal-legacy</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/internal-legacy/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_zup-jars-releases</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/zup-jars-releases/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_zup-jars-snapshots</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/zup-jars-snapshots/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_zupme-jars-releases</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/zupme-jars-releases/</url>
-        </repository>
-        <repository>
-          <id>rit_zup-repos_zupme-jars-snapshots</id>
-          <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/zupme-jars-snapshots/</url>
-        </repository>
-        <repository>
-          <id>rit-zup-public</id>
-          <url>https://zup-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/public/</url>
+          <id>claro-codeartifact-claro-flex-artifacts</id>
+          <url>
+            https://claro-codeartifact-319569500149.d.codeartifact.us-east-1.amazonaws.com/maven/claro-flex-artifacts/</url>
+          <releases>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
         </repository>
       </repositories>
     </profile>
   </profiles>
+
   <mirrors>
     <mirror>
-      <id>rit_zup-repos_internal-legacy</id>
-      <name>Internal Mirror</name>
-      <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/internal-legacy/</url>
-      <mirrorOf>internal-zup</mirrorOf>
-    </mirror>
-    <mirror>
-      <id>rit_zup-repos_snapshot-legacy</id>
-      <name>Internal Mirror</name>
-      <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/snapshots-legacy/</url>
-      <mirrorOf>snapshots-zup</mirrorOf>
-    </mirror>
-    <mirror>
-      <id>rit_zup-repos_rw-jars-releases</id>
-      <name>Rw Mirror</name>
-      <url>https://zup-repos-546045978864.d.codeartifact.us-east-1.amazonaws.com/maven/rw-jars-releases/</url>
-      <mirrorOf>rw-nexus-release</mirrorOf>
+      <id>claro-codeartifact-claro-flex-artifacts</id>
+      <name>claro-codeartifact-claro-flex-artifacts</name>
+      <url>
+        https://claro-codeartifact-319569500149.d.codeartifact.us-east-1.amazonaws.com/maven/claro-flex-artifacts/</url>
+      <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
+
 </settings>

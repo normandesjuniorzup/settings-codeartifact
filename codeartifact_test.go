@@ -44,10 +44,10 @@ func TestGetAuthorizationToken(t *testing.T) {
 		t.Errorf("got expiration %q, want %q", tokenOut.Expiration, wantExpiration)
 	}
 
-	if client.Domain != "zup" {
+	if client.Domain != "claro-codeartifact" {
 		t.Errorf("got %q as domain, should be %q", client.Domain, "zup")
 	}
-	if client.DomainOwner != "546045978864" {
+	if client.DomainOwner != "319569500149" {
 		t.Errorf("got %q as domain owner, should be %q", client.DomainOwner, "546045978864")
 	}
 }

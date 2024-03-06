@@ -22,8 +22,8 @@ func GetAuthorizationToken(client CodeArtifactClient) (*TokenOutput, error) {
 	ctx := context.TODO()
 
 	input := &codeartifact.GetAuthorizationTokenInput{
-		Domain:      aws.String("zup"),
-		DomainOwner: aws.String("546045978864"),
+		Domain:      aws.String("claro-codeartifact"),
+		DomainOwner: aws.String("319569500149"),
 	}
 
 	tokenOut, err := client.GetAuthorizationToken(ctx, input)
